@@ -74,19 +74,19 @@ mv ./files-7days-modifiziert.txt ./tmp; sort ./tmp > ./files-7days-modifiziert.t
 #suche: *.sh, *.py 
 find ./ -name '*.py' > ./files-python-scripte.txt 
 mv ./files-python-scripte.txt ./tmp; sort ./tmp > ./files-python-scripte.txt; rm ./tmp
-
+#
 find ./ -name '*.sh' > ./files-bash-scripte.txt 
 mv ./files-bash-scripte.txt ./tmp; sort ./tmp > ./files-bash-scripte.txt; rm ./tmp
 
+# Aufruf ext. Script
+./rechte.sh
+
 echo '* alle *.txt > txt/'
+# alle *.txt > txt/
 ordner="txt"
-#if [ ! -d $ordner/ ]; then mkdir -p $ordner/; fi
-if [ -f *.txt ]; then 
-  if [ ! -d $ordner/ ]; then 
-    mkdir -p $ordner/; 
-  fi
-  mv *.txt $ordner/; 
-fi
+if [ ! -d $ordner/ ]; then mkdir -p $ordner/; fi
+mv *.txt $ordner/; 
+
 
 
 
