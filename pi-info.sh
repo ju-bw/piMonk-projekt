@@ -37,85 +37,142 @@ echo ''
 echo '  +++ "Infos" werden im Ordner "txt/*.txt" gespeichert!'
 echo ''
 
-echo '* Zuordnung zwischen Pin-Nummern und BCM-Nummern'
 # Zuordnung zwischen Pin-Nummern und BCM-Nummern
-gpio -g readall > pi-gpioNummern.txt
-pinout > pi-gpioNummern2.txt
+echo '* Zuordnung zwischen Pin-Nummern und BCM-Nummern'
+echo '# Zuordnung zwischen Pin-Nummern und BCM-Nummern' > pi-gpioNummern.txt
+echo '' >> pi-gpioNummern.txt
+echo $copyright $timestamp >> pi-gpioNummern.txt
+echo '' >> pi-gpioNummern.txt
+gpio -g readall >> pi-gpioNummern.txt
+pinout >> pi-gpioNummern.txt
 
-echo '* Systeminformationen'
 # Systeminformationen
-hostnamectl > pi-systemInfo.txt
+echo '* Systeminformationen'
+echo '# Systeminformationen' > pi-systemInfo.txt
+echo '' >> pi-systemInfo.txt
+echo $copyright $timestamp >> pi-systemInfo.txt
+echo '' >> pi-systemInfo.txt
+hostnamectl >> pi-systemInfo.txt
 
-echo '* Firmware'
 # Firmware
-vcgencmd version > pi-firmware.txt
+echo '* Firmware'
+echo '# Firmware' > pi-firmware.txt
+echo '' >> pi-firmware.txt
+echo $copyright $timestamp >> pi-firmware.txt
+echo '' >> pi-firmware.txt
+vcgencmd version >> pi-firmware.txt
 
-echo '* CPU'
 # CPU
-cat /proc/cpuinfo > pi-cpu.txt
+echo '* CPU'
+echo '# CPU' > pi-cpu.txt
+echo '' >> pi-cpu.txt
+echo $copyright $timestamp >> pi-cpu.txt
+echo '' >> pi-cpu.txt
+cat /proc/cpuinfo >> pi-cpu.txt
 
-echo '* Pi Model'
 # Pi Model
-cat /proc/device-tree/model > pi-model.txt
+echo '* Pi Model'
+echo '# Pi Model' > pi-model.txt
+echo '' >> pi-model.txt
+echo $copyright $timestamp >> pi-model.txt
+echo '' >> pi-model.txt
+cat /proc/device-tree/model >> pi-model.txt
 
-echo '* Speicherplatz sdcard'
 # Speicherplatz sdcard
-df -h > pi-speicherplatz.txt
+echo '* Speicherplatz sdcard'
+echo '# Speicherplatz sdcard' > pi-speicherplatz.txt
+echo '' >> pi-speicherplatz.txt
+echo $copyright $timestamp >> pi-speicherplatz.txt
+echo '' >> pi-speicherplatz.txt
+df -h >> pi-speicherplatz.txt
 
-echo '* Taktfrequenzen der Prozessorkerne'
 # Taktfrequenzen der Prozessorkerne
 # sudo apt-get install cpufrequtils
-cpufreq-info | grep -iE "analysiere|mögliche Taktfrequenzen|Statistik" > pi-takt-kerne.txt
+echo '* Taktfrequenzen der Prozessorkerne'
+echo '# Taktfrequenzen der Prozessorkerne' > pi-takt-kerne.txt
+echo '' >> pi-takt-kerne.txt
+echo $copyright $timestamp >> pi-takt-kerne.txt
+echo '' >> pi-takt-kerne.txt
+cpufreq-info | grep -iE "analysiere|mögliche Taktfrequenzen|Statistik" >> pi-takt-kerne.txt
 
-echo '* Temperatur des Prozessors'
 # Temperatur des Prozessors
-vcgencmd measure_temp > pi-temperatur.txt
+echo '* Temperatur des Prozessors'
+echo '# Temperatur des Prozessors' > pi-temperatur.txt
+echo '' >> pi-temperatur.txt
+echo $copyright $timestamp >> pi-temperatur.txt
+echo '' >> pi-temperatur.txt
+vcgencmd measure_temp >> pi-temperatur.txt
 
-#echo '* '
 # Informationen zur Prozessor- und Speicherauslastung
 #top > pi-cpu-speicherauslastung.txt
 
-echo '* Verteilung des Shared-Memory'
 # Verteilung des Shared-Memory
-vcgencmd get_mem arm > pi-shared-memory.txt
+echo '* Verteilung des Shared-Memory'
+echo '# Verteilung des Shared-Memory' > pi-shared-memory.txt
+echo '' >> pi-shared-memory.txt
+echo $copyright $timestamp >> pi-shared-memory.txt
+echo '' >> pi-shared-memory.txt
+vcgencmd get_mem arm >> pi-shared-memory.txt
 vcgencmd get_mem gpu >> pi-shared-memory.txt
 
-echo '* RAM Speicher'
 # RAM Speicher
-free -h > pi-RAM-Speicher.txt
+echo '* RAM Speicher'
+echo '# RAM Speicher' > pi-RAM-Speicher.txt
+echo '' >> pi-RAM-Speicher.txt
+echo $copyright $timestamp >> pi-RAM-Speicher.txt
+echo '' >> pi-RAM-Speicher.txt
+free -h >> pi-RAM-Speicher.txt
 
-echo '* host - user - ip - speicherbelegung'
 # host - user - ip - speicherbelegung
+echo '* host - user - ip - speicherbelegung'
+echo '# host - user - ip - speicherbelegung' > pi-host-user-ipAdresse.txt
+echo '' >> pi-host-user-ipAdresse.txt
+echo $copyright $timestamp >> pi-host-user-ipAdresse.txt
+echo '' >> pi-host-user-ipAdresse.txt
 host=$(hostname)
-echo '- Host: ' $host > pi-host-user-ipAdresse.txt
+echo 'Host: ' $host >> pi-host-user-ipAdresse.txt
 user=$(whoami)
-echo '- User: ' $user >> pi-host-user-ipAdresse.txt
+echo 'User: ' $user >> pi-host-user-ipAdresse.txt
 ip=$(ip addr | awk '/inet.[0-9]/&&!/127.0.0.1/ {print $2}')
-echo '- IP: ' $ip >> pi-host-user-ipAdresse.txt
+echo 'IP - LAN (1) und WLAN (2): ' $ip >> pi-host-user-ipAdresse.txt
 df -h >> pi-host-user-ipAdresse.txt 
 
-echo '* Suche files'
 #suche: files, die sich innerhalb 24 h geaendert haben
-find ./ -type f -mtime -1 > ./files-24h-modifiziert.txt
+echo '* Suche files'
+echo '# suche: files, die sich innerhalb 24 h geaendert haben' > ./files-24h-modifiziert.txt
+echo '' >> ./files-24h-modifiziert.txt
+echo $copyright $timestamp >> ./files-24h-modifiziert.txt
+echo '' >> ./files-24h-modifiziert.txt
+find ./ -name '*.py' -type f -mtime -1 >> ./files-24h-modifiziert.txt
+echo '****************' >> ./files-24h-modifiziert.txt 
+find ./ -name '*.sh' -type f -mtime -1 >> ./files-24h-modifiziert.txt
 mv ./files-24h-modifiziert.txt ./tmp; sort ./tmp > ./files-24h-modifiziert.txt; rm ./tmp
 
 #suche: files, die sich innerhalb 7 Days geaendert haben
-find ./ -type f -mtime -7 > ./files-7days-modifiziert.txt 
+echo '# suche: files, die sich innerhalb 7 Days geaendert haben' > ./files-7days-modifiziert.txt 
+echo '' >> ./files-7days-modifiziert.txt 
+echo $copyright $timestamp >> ./files-7days-modifiziert.txt 
+echo '' >> ./files-7days-modifiziert.txt 
+find ./ -name '*.py' -type f -mtime -7 >> ./files-7days-modifiziert.txt 
+echo '****************' >> ./files-7days-modifiziert.txt
+find ./ -name '*.sh' -type f -mtime -7 >> ./files-7days-modifiziert.txt 
 mv ./files-7days-modifiziert.txt ./tmp; sort ./tmp > ./files-7days-modifiziert.txt; rm ./tmp
 
 #suche: *.sh, *.py 
-find ./ -name '*.py' > ./files-python-scripte.txt 
-mv ./files-python-scripte.txt ./tmp; sort ./tmp > ./files-python-scripte.txt; rm ./tmp
-#
-find ./ -name '*.sh' > ./files-bash-scripte.txt 
-mv ./files-bash-scripte.txt ./tmp; sort ./tmp > ./files-bash-scripte.txt; rm ./tmp
+echo '# suche: *.sh, *.py' > ./files-alle-scripte.txt 
+echo '' >> ./files-alle-scripte.txt 
+echo $copyright $timestamp >> ./files-alle-scripte.txt 
+echo '' >> ./files-alle-scripte.txt 
+find ./ -name '*.py' >> ./files-alle-scripte.txt 
+echo '****************' >> ./files-alle-scripte.txt 
+find ./ -name '*.sh' >> ./files-alle-scripte.txt 
+mv ./files-alle-scripte.txt ./tmp; sort ./tmp > ./files-alle-scripte.txt; rm ./tmp
 
 # Aufruf ext. Script
 ./rechte.sh
 
+# mv alle *.txt > txt/
 echo '* mv alle *.txt > txt/'
-# alle *.txt > txt/
-ordner="txt"
 if [ ! -d $ordner/ ]; then mkdir -p $ordner/; fi
 mv *.txt $ordner/; 
 
