@@ -8,3 +8,10 @@
 hostname -I
 
 ifconfig
+
+host=$(hostname)
+echo '- Host: ' $host 
+user=$(whoami)
+echo '- User: ' $user 
+ip=$(ip addr | awk '/inet.[0-9]/&&!/127.0.0.1/ {print $2}')
+echo '- IP: ' $ip 
