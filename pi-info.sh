@@ -34,7 +34,7 @@ echo '*' $ip
 echo '***********************************************'
 
 echo ''
-echo '* +++ "Infos" werden im Ordner "txt/*.txt" gespeichert!'
+echo '  +++ "Infos" werden im Ordner "txt/*.txt" gespeichert!'
 echo ''
 
 echo '* Zuordnung zwischen Pin-Nummern und BCM-Nummern'
