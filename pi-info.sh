@@ -176,6 +176,7 @@ mv ./files-alle-scripte.txt ./tmp; sort ./tmp > ./files-alle-scripte.txt; rm ./t
 sleep 1
 echo '* mv alle *.txt > txt/'
 if [ ! -d $ordner/ ]; then mkdir -p $ordner/; fi
+rm $ordner/*.txt
 sudo mv *.txt $ordner/
 
 echo ''
