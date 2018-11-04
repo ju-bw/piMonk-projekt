@@ -176,9 +176,12 @@ mv ./temp.txt ./tmp; sort ./tmp >> ./files-alle-scripte.txt; rm ./tmp
 #sleep: 1 Sekunde warten
 sleep 1
 echo '* mv alle *.txt > txt/'
+ordner="txt"
+# Ordner erstellen
 if [ ! -d $ordner/ ]; then mkdir -p $ordner/; fi
-sudo rm $ordner/*.txt
-sudo mv *.txt $ordner/
+# löschen 
+if [ `ls -a  $ordner/ | wc -l` -gt 2 ]; then rm $ordner/*.txt; fi
+mv *.txt $ordner/
 
 echo ''
 
