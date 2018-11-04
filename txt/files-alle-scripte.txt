@@ -1,0 +1,21 @@
+
+
+****************
+./cpu-leistung.py
+./datei-aus-Internet-herunterladen.sh
+./hello.py
+./ip-adresse-ermitteln.sh
+% ju -- https://bw1.eu -- 04-Nov-18
+./kameramodul.sh
+./pi-info.sh
+./programmierleitfaden.py
+./python-grundlagen.py
+./reboot.sh
+./rechte.sh
+./screenshot.sh
+./suchen.sh
+# suche: *.sh, *.py
+./svg.py
+./svg-python-install.sh
+./test.py
+./usb-geraete-auflisten.sh
