@@ -8,7 +8,8 @@
 clear
 
 echo '***********************************************'
-echo '* Raspberry Pi'
+piModel=$(cat /proc/device-tree/model  |  tr -d '\0')
+echo '*' $piModel
 echo '* Infos werden im Ordner txt/*.txt gespeichert.'
 echo '***********************************************'
 
