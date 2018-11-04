@@ -5,6 +5,11 @@
 # update:   
 #==================================
 
+clear
+
+echo '*******************'
+echo '*** Raspberry Pi ***
+
 echo '* Zuordnung zwischen Pin-Nummern und BCM-Nummern'
 # Zuordnung zwischen Pin-Nummern und BCM-Nummern
 gpio -g readall > pi-gpioNummern.txt
@@ -81,7 +86,7 @@ mv ./files-bash-scripte.txt ./tmp; sort ./tmp > ./files-bash-scripte.txt; rm ./t
 # Aufruf ext. Script
 ./rechte.sh
 
-echo '* alle *.txt > txt/'
+echo '* mv alle *.txt > txt/'
 # alle *.txt > txt/
 ordner="txt"
 if [ ! -d $ordner/ ]; then mkdir -p $ordner/; fi

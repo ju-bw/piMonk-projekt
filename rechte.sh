@@ -5,7 +5,7 @@
 # update:   
 #==================================
 
-clear
+#clear
 
 # Zeit
 timestamp=$(date +"%d-%h-%y")
