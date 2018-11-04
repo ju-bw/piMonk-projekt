@@ -7,20 +7,6 @@
 
 #clear
 
-# Zeit
-timestamp=$(date +"%d-%h-%y")
-copyright="% ju -- https://bw1.eu -- "
-echo '*******************'
-echo $copyright $timestamp
-
-host=$(hostname)
-echo '* Host: ' $host
-user=$(whoami)
-echo '* User: ' $user
-ip=$(ip addr | awk '/inet.[0-9]/&&!/127.0.0.1/ {print $2}')
-echo '* IP: ' $ip
-
-
 echo "* Gruppe ..."
 # gruppe 
 # sudo addgroup hacker
@@ -42,6 +28,3 @@ echo "* Scripte *.sh u. *.py ..."
 sudo find . -name "*.sh"  -exec chmod 774 {} +
 sudo find . -name "*.py"  -exec chmod 774 {} +
 
-#
-#ls -lh
-echo '*******************'

@@ -7,9 +7,23 @@
 
 clear
 
-echo '********************'
-echo '*** Raspberry Pi ***'
+echo '*********************************************'
+echo 'Raspberry Pi'
 echo 'Infos werden im Ordner txt/*.txt gespeichert.'
+echo '*********************************************'
+
+# Zeit
+timestamp=$(date +"%d-%h-%y")
+copyright="% ju -- https://bw1.eu -- "
+echo '********************'
+echo $copyright $timestamp
+# host - user - ip
+host=$(hostname)
+echo '* Host: ' $host
+user=$(whoami)
+echo '* User: ' $user
+ip=$(ip addr | awk '/inet.[0-9]/&&!/127.0.0.1/ {print $2}')
+echo '* IP: ' $ip
 echo '********************'
 
 echo '* Zuordnung zwischen Pin-Nummern und BCM-Nummern'
@@ -93,6 +107,8 @@ echo '* mv alle *.txt > txt/'
 ordner="txt"
 if [ ! -d $ordner/ ]; then mkdir -p $ordner/; fi
 mv *.txt $ordner/; 
+
+echo '********************'
 
 
 
