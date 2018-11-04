@@ -29,7 +29,8 @@ echo '* mem_'$piMem_arm
 echo '* mem_'$piMem_gpu
 echo '* Host: ' $host
 echo '* User: ' $user
-echo '* IP - LAN (1) und WLAN (2): ' $ip
+echo '* IP - LAN (1) und WLAN (2):' 
+echo '*' $ip
 echo '***********************************************'
 
 echo ''
