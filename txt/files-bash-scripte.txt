@@ -1,0 +1,10 @@
+./datei-aus-Internet-herunterladen.sh
+./ip-adresse-ermitteln.sh
+./kameramodul.sh
+./pi-info.sh
+./reboot.sh
+./rechte.sh
+./screenshot.sh
+./suchen.sh
+./svg-python-install.sh
+./usb-geraete-auflisten.sh

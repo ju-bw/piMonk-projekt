@@ -1,0 +1,6 @@
+./cpu-leistung.py
+./hello.py
+./programmierleitfaden.py
+./python-grundlagen.py
+./svg.py
+./test.py

@@ -1,0 +1,12 @@
+- Host:  raspi
+- User:  pi
+- IP:  192.168.178.60/24 192.168.178.61/24
+Dateisystem    Größe Benutzt Verf. Verw% Eingehängt auf
+/dev/root        15G     11G  3,6G   75% /
+devtmpfs        434M       0  434M    0% /dev
+tmpfs           438M       0  438M    0% /dev/shm
+tmpfs           438M     34M  405M    8% /run
+tmpfs           5,0M    4,0K  5,0M    1% /run/lock
+tmpfs           438M       0  438M    0% /sys/fs/cgroup
+/dev/mmcblk0p1   41M     23M   19M   54% /boot
+tmpfs            88M    4,0K   88M    1% /run/user/1000

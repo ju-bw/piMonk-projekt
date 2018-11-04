@@ -1,0 +1,12 @@
+analysiere CPU 0:
+  mögliche Taktfrequenzen: 600 MHz, 1.20 GHz
+  Statistik:600 MHz:98,61%, 1.20 GHz:1,39%  (12225)
+analysiere CPU 1:
+  mögliche Taktfrequenzen: 600 MHz, 1.20 GHz
+  Statistik:600 MHz:98,61%, 1.20 GHz:1,39%  (12225)
+analysiere CPU 2:
+  mögliche Taktfrequenzen: 600 MHz, 1.20 GHz
+  Statistik:600 MHz:98,61%, 1.20 GHz:1,39%  (12225)
+analysiere CPU 3:
+  mögliche Taktfrequenzen: 600 MHz, 1.20 GHz
+  Statistik:600 MHz:98,61%, 1.20 GHz:1,39%  (12225)

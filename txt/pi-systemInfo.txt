@@ -1,0 +1,7 @@
+   Static hostname: raspi
+         Icon name: computer
+        Machine ID: fb2a24060baf49109292fd77da0826b4
+           Boot ID: f3952d7c95ab4e8c8d975558f7e2e803
+  Operating System: Raspbian GNU/Linux 9 (stretch)
+            Kernel: Linux 4.14.78-v7+
+      Architecture: arm
