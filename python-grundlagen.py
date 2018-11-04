@@ -8,6 +8,8 @@
 import os
 import copy
 from datetime import datetime
+import random
+import sys
 
 
 ## Variablen
@@ -380,3 +382,84 @@ try:
 except IOError:
   print("Cannot open the file")
 
+## Ausnahmebehandlung
+
+try:
+  f = open('test.txt')
+  s = f.read()
+  f.close()
+except IOError:
+  print("Cannot open the file")
+
+list = [1, 2, 3]
+try:
+  list[8]
+except:
+  print("fehler")
+else:
+  print("wird ausgefuehrt, wenn keine Ausnahme vorhanden war")
+finally:
+  print("wird unabhaengig davon, ob es eine Ausnahme gab oder nicht, ausgefuehrt") 
+
+## Module nutzen
+
+'''
+  import random              # Zugriff: random.randint(1,6)
+  from random import *       # Zugriff: randint(1,6)
+  from random import randint # Zugriff: randint(1,6)
+  import random as R         # Zugriff: R.randint(1,6)
+'''
+
+
+## Zufallszahlen
+
+#import random
+print("Zufallszahl: ", random.randint(1, 6))
+print("Zufallszahl: ", random.randint(1, 6))
+print("Zufallszahl: ", random.randint(1, 6))
+
+## Kommandozeilenargumente in Python
+
+'''
+  $ vi cmd-line.py
+
+  import sys
+  for (i, value) in enumerate(sys.argv):
+    print("arg: %d %s " % (i, value))
+
+  $ python3 cmd-line.py a b c
+'''
+
+## Linux-Befehle aus Python heraus ausführen
+
+'''
+  $ vi os-python.py
+
+  import os
+  import subprocess
+  ordnerInhalt = os.system("ls")
+  print(ordnerInhalt)
+
+  ip = subprocess.check_output(['hostname', '-I'])
+  print(ip)
+
+  $ python3 os-python.py
+'''
+
+## Webserver in Python entwickeln
+
+'''
+  $ sudo apt-get install python-bottle
+  $ vi webserver-test.py
+
+  from bottle import route, run, template
+  from datetime import datetime
+  @route('/')
+  def index(name='time'):
+  dt = datetime.now()
+  time = "{:%Y-%m-%d %H:%M:%S}".format(dt)
+  return template('<b>Pi thinks the date/time is: {{t}}</b>', t=time)
+  run(host='192.168.1.16', port=80)
+
+  $ sudo python3 webserver-test.py
+'''
