@@ -7,9 +7,16 @@
 
 clear
 
-echo '***********************************************'
 piModel=$(cat /proc/device-tree/model  |  tr -d '\0')
+piTemp=$(vcgencmd measure_temp |  tr -d '\0')
+piMem_arm=$(vcgencmd get_mem arm |  tr -d '\0')
+piMem_gpu=$(vcgencmd get_mem gpu |  tr -d '\0')
+
+echo '***********************************************'
 echo '*' $piModel
+echo '*' $piTemp
+echo '* mem_' $piMem_arm
+echo '* mem_' $piMem_gpu
 echo '* Infos werden im Ordner txt/*.txt gespeichert.'
 echo '***********************************************'
 
