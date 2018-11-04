@@ -8,7 +8,7 @@
 clear
 
 echo '*******************'
-echo '*** Raspberry Pi ***
+echo '*** Raspberry Pi ***'
 
 echo '* Zuordnung zwischen Pin-Nummern und BCM-Nummern'
 # Zuordnung zwischen Pin-Nummern und BCM-Nummern
