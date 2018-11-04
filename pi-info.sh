@@ -7,31 +7,30 @@
 
 clear
 
+# Zeit
+timestamp=$(date +"%d-%h-%y")
+copyright="% ju -- https://bw1.eu -- "
+#
 piModel=$(cat /proc/device-tree/model  |  tr -d '\0')
 piTemp=$(vcgencmd measure_temp |  tr -d '\0')
 piMem_arm=$(vcgencmd get_mem arm |  tr -d '\0')
 piMem_gpu=$(vcgencmd get_mem gpu |  tr -d '\0')
+# host - user - ip
+host=$(hostname)
+user=$(whoami)
+ip=$(ip addr | awk '/inet.[0-9]/&&!/127.0.0.1/ {print $2}')
 
 echo '***********************************************'
+echo $copyright $timestamp
 echo '*' $piModel
 echo '*' $piTemp
 echo '* mem_' $piMem_arm
 echo '* mem_' $piMem_gpu
+echo '* Host: ' $host
+echo '* User: ' $user
+echo '* IP: ' $ip
 echo '* Infos werden im Ordner txt/*.txt gespeichert.'
 echo '***********************************************'
-
-# Zeit
-timestamp=$(date +"%d-%h-%y")
-copyright="% ju -- https://bw1.eu -- "
-echo $copyright $timestamp
-# host - user - ip
-host=$(hostname)
-echo '* Host: ' $host
-user=$(whoami)
-echo '* User: ' $user
-ip=$(ip addr | awk '/inet.[0-9]/&&!/127.0.0.1/ {print $2}')
-echo '* IP: ' $ip
-echo '********************'
 
 echo '* Zuordnung zwischen Pin-Nummern und BCM-Nummern'
 # Zuordnung zwischen Pin-Nummern und BCM-Nummern
