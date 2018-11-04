@@ -7,8 +7,10 @@
 
 clear
 
-echo '*******************'
+echo '********************'
 echo '*** Raspberry Pi ***'
+echo 'Infos werden im Ordner txt/*.txt gespeichert.'
+echo '********************'
 
 echo '* Zuordnung zwischen Pin-Nummern und BCM-Nummern'
 # Zuordnung zwischen Pin-Nummern und BCM-Nummern
