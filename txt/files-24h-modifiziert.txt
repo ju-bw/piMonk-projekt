@@ -1,13 +1,12 @@
+# suche: files, die sich innerhalb 24 h geaendert haben
 
+% ju -- https://bw1.eu -- 04-Nov-18
 
-****************
 ./datei-aus-Internet-herunterladen.sh
 ./ip-adresse-ermitteln.sh
-% ju -- https://bw1.eu -- 04-Nov-18
 ./kameramodul.sh
 ./pi-info.sh
 ./python-grundlagen.py
 ./rechte.sh
 ./screenshot.sh
-# suche: files, die sich innerhalb 24 h geaendert haben
 ./suchen.sh

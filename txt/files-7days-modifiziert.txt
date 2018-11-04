@@ -1,18 +1,17 @@
+# suche: files, die sich innerhalb 7 Days geaendert haben
 
+% ju -- https://bw1.eu -- 04-Nov-18
 
-****************
 ./cpu-leistung.py
 ./datei-aus-Internet-herunterladen.sh
 ./hello.py
 ./ip-adresse-ermitteln.sh
-% ju -- https://bw1.eu -- 04-Nov-18
 ./kameramodul.sh
 ./pi-info.sh
 ./python-grundlagen.py
 ./reboot.sh
 ./rechte.sh
 ./screenshot.sh
-# suche: files, die sich innerhalb 7 Days geaendert haben
 ./suchen.sh
 ./svg.py
 ./svg-python-install.sh

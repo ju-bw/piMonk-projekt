@@ -2,4 +2,4 @@
 
 % ju -- https://bw1.eu -- 04-Nov-18
 
-temp=49.9'C
+temp=49.4'C

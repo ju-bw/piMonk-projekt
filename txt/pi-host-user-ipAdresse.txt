@@ -4,7 +4,9 @@
 
 Host:  raspi
 User:  pi
-IP - LAN (1) und WLAN (2):  192.168.178.60/24 192.168.178.61/24
+IP - LAN (1) und WLAN (2):
+192.168.178.60/24 192.168.178.61/24
+## Speicherplatz sdcard
 Dateisystem    Größe Benutzt Verf. Verw% Eingehängt auf
 /dev/root        15G     11G  3,6G   75% /
 devtmpfs        434M       0  434M    0% /dev

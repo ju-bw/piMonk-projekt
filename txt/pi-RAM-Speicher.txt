@@ -3,5 +3,5 @@
 % ju -- https://bw1.eu -- 04-Nov-18
 
               total        used        free      shared  buff/cache   available
-Mem:           875M        183M        107M         41M        584M        586M
+Mem:           875M        184M        106M         41M        585M        586M
 Swap:           99M        1,5M         98M

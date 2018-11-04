@@ -2,5 +2,5 @@
 
 % ju -- https://bw1.eu -- 04-Nov-18
 
-arm=896M
-gpu=128M
+mem_vcgencmd get_mem arm
+mem_vcgencmd get_mem gpu
