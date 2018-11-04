@@ -8,3 +8,4 @@
 #wget https://*.zip
 
 git clone https://github.com/ju-bw/piMonk.git 
+git clone https://github.com/ju-bw/piMonk-projekt.git 
