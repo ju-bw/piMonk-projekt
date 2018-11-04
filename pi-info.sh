@@ -24,13 +24,16 @@ echo '***********************************************'
 echo $copyright $timestamp
 echo '*' $piModel
 echo '*' $piTemp
-echo '* mem_' $piMem_arm
-echo '* mem_' $piMem_gpu
+echo '* mem_'$piMem_arm
+echo '* mem_'$piMem_gpu
 echo '* Host: ' $host
 echo '* User: ' $user
-echo '* IP: ' $ip
-echo '* Infos werden im Ordner txt/*.txt gespeichert.'
+echo '* IP - LAN (1) und WLAN (2): ' $ip
 echo '***********************************************'
+
+echo ''
+echo '*** "Infos" werden im Ordner "txt/*.txt" gespeichert! ***'
+echo ''
 
 echo '* Zuordnung zwischen Pin-Nummern und BCM-Nummern'
 # Zuordnung zwischen Pin-Nummern und BCM-Nummern
