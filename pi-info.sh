@@ -12,16 +12,17 @@ timestamp=$(date +"%d-%h-%y")
 copyright="% ju -- https://bw1.eu -- "
 #
 piModel=$(cat /proc/device-tree/model  |  tr -d '\0')
-piTemp=$(vcgencmd measure_temp |  tr -d '\0')
-piMem_arm=$(vcgencmd get_mem arm |  tr -d '\0')
-piMem_gpu=$(vcgencmd get_mem gpu |  tr -d '\0')
+piTemp=$(vcgencmd measure_temp)
+piMem_arm=$(vcgencmd get_mem arm)
+piMem_gpu=$(vcgencmd get_mem gpu)
 # host - user - ip
 host=$(hostname)
 user=$(whoami)
 ip=$(ip addr | awk '/inet.[0-9]/&&!/127.0.0.1/ {print $2}')
 
+echo ''
 echo '***********************************************'
-echo $copyright $timestamp
+echo '*' $copyright $timestamp
 echo '*' $piModel
 echo '*' $piTemp
 echo '* mem_'$piMem_arm
@@ -32,7 +33,7 @@ echo '* IP - LAN (1) und WLAN (2): ' $ip
 echo '***********************************************'
 
 echo ''
-echo '*** "Infos" werden im Ordner "txt/*.txt" gespeichert! ***'
+echo '* +++ "Infos" werden im Ordner "txt/*.txt" gespeichert!'
 echo ''
 
 echo '* Zuordnung zwischen Pin-Nummern und BCM-Nummern'
