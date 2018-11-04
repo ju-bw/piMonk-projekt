@@ -7,15 +7,14 @@
 
 clear
 
-echo '*********************************************'
-echo 'Raspberry Pi'
-echo 'Infos werden im Ordner txt/*.txt gespeichert.'
-echo '*********************************************'
+echo '***********************************************'
+echo '* Raspberry Pi'
+echo '* Infos werden im Ordner txt/*.txt gespeichert.'
+echo '***********************************************'
 
 # Zeit
 timestamp=$(date +"%d-%h-%y")
 copyright="% ju -- https://bw1.eu -- "
-echo '********************'
 echo $copyright $timestamp
 # host - user - ip
 host=$(hostname)
@@ -108,7 +107,7 @@ ordner="txt"
 if [ ! -d $ordner/ ]; then mkdir -p $ordner/; fi
 mv *.txt $ordner/; 
 
-echo '********************'
+echo ''
 
 
 
