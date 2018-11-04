@@ -77,7 +77,7 @@ echo '# Pi Model' > pi-model.txt
 echo '' >> pi-model.txt
 echo $copyright $timestamp >> pi-model.txt
 echo '' >> pi-model.txt
-cat /proc/device-tree/model >> pi-model.txt
+echo $piModel >> pi-model.txt
 
 # Speicherplatz sdcard
 echo '* Speicherplatz sdcard'
@@ -102,7 +102,7 @@ echo '# Temperatur des Prozessors' > pi-temperatur.txt
 echo '' >> pi-temperatur.txt
 echo $copyright $timestamp >> pi-temperatur.txt
 echo '' >> pi-temperatur.txt
-vcgencmd measure_temp >> pi-temperatur.txt
+echo $piTemp >> pi-temperatur.txt
 
 # Informationen zur Prozessor- und Speicherauslastung
 #top > pi-cpu-speicherauslastung.txt
@@ -113,8 +113,8 @@ echo '# Verteilung des Shared-Memory' > pi-shared-memory.txt
 echo '' >> pi-shared-memory.txt
 echo $copyright $timestamp >> pi-shared-memory.txt
 echo '' >> pi-shared-memory.txt
-echo 'mem_'vcgencmd get_mem arm >> pi-shared-memory.txt
-echo 'mem_'vcgencmd get_mem gpu >> pi-shared-memory.txt
+echo '* mem_'$piMem_arm >> pi-shared-memory.txt
+echo '* mem_'$piMem_gpu >> pi-shared-memory.txt
 
 # RAM Speicher
 echo '* RAM Speicher'
@@ -173,8 +173,6 @@ mv ./temp.txt ./tmp; sort ./tmp >> ./files-alle-scripte.txt; rm ./tmp
 ./rechte.sh
 
 # mv alle *.txt > txt/
-#sleep: 1 Sekunde warten
-sleep 1
 echo '* mv alle *.txt > txt/'
 ordner="txt"
 # Ordner erstellen
