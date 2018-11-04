@@ -21,3 +21,4 @@ ps -ef | grep "python"
 
 # Prozess beenden
 #sudo kill "Prozess-ID"
+

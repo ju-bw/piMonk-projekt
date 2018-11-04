@@ -7,5 +7,10 @@
 
 #sudo apt-get install scrot
 
-# Screenshot in 5s
-scrot -d 5
+# Screenshot 
+# Optionen:
+# -d 5: Delay von 5 Sekunden
+# -c Count-Down Zähler
+# image001.png, jpg
+
+scrot -d 5 -c screenshot.jpg

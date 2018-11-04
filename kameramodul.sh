@@ -9,10 +9,12 @@
 #sudo raspi-config
 
 # Standbild
-raspistill -o image.jpg
+raspistill -o image-pi.jpg
 # Videos 10s
-raspivid -o video.h264 -t 10000
+raspivid -o video-pi.h264 -t 10000
+#sudo apt-get install libav-tools
+avconv -i video-pi.h264 video-pi.mp4
 
-# Webcam-Server einrichten
+# USB Webcam-Server einrichten
 #sudo apt-get install motion
  

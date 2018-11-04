@@ -47,12 +47,12 @@ print("Strings verketten: ", s)
 # Strings in Zahlen umwandeln
 zahl = int("-123")
 kommazahl = float("00123.45")
-bin_in_dez = int("1001", 2)# Binärwert in eine Dezimalzahl
+bin_in_dez = int("1001", 2)# Binaerwert in eine Dezimalzahl
 hex_in_int = int("AFF0", 16)# Hexadezimalzahl in einen Integerwert
 print(zahl, kommazahl, bin_in_dez, hex_in_int)
-# Länge eines Strings
+# Laenge eines Strings
 laenge = int(len("abcdef"))
-print("Länge eines Strings: ", laenge)
+print("Laenge eines Strings: ", laenge)
 # Position in einem String suchen
 s = "abcdefghi"
 var = s.find("def")
@@ -64,14 +64,14 @@ print("Teilstring extrahieren: ", var)
 s = "It was the best of X. It was the worst of X."
 var = s.replace("X", "times")# suchen, ersetzen
 print("Teilstring durch einen anderen ersetzen: ", var)
-# String in Groß- oder Kleinbuchstaben umwandeln
+# String in Gross- oder Kleinbuchstaben umwandeln
 s = "aBcDe"
 var = s.upper()
-print("String in Großbuchstaben umwandeln: ", var)
+print("String in Grossbuchstaben umwandeln: ", var)
 var = s.lower()
 print("String in Kleinbuchstaben umwandeln: ", var)
 
-## Befehle bedingt ausführen
+## Befehle bedingt ausfuehren
 
 x = 101
 if x > 100:
@@ -90,9 +90,9 @@ else:
 '''
   <, >, <=, >=, == oder !=
    < kleiner als
-   > größer als
+   > grösser als
   <= kleiner oder gleich
-  >= größer oder gleich
+  >= grösser oder gleich
   == gleich
   != ungleich
 '''
@@ -104,12 +104,12 @@ x = 17
 if x >= 10 and x <= 20:
   print('x is in the middle')
 
-## Anweisungen genau x-mal ausführen
+## Anweisungen genau x-mal ausfuehren
 
 for i in range(1, 11):# 10x
   print(i)
 
-## Befehle wiederholen, bis sich eine Bedingung ändert
+## Befehle wiederholen, bis sich eine Bedingung aendert
 
 antwort = ''
 while antwort != 'X':
@@ -146,7 +146,7 @@ count(5, 12)
 def make_bitte(satz):
   return satz + " bitte."
 
-var = make_bitte("Gib den Käse")
+var = make_bitte("Gib den Kaese")
 print(var)
 
 ## Listen
@@ -160,12 +160,12 @@ print("Liste erzeugen: ", a)
 a = [34, 'Fred', 12, False, 72.3]
 var = a[1]
 print("Auf Elemente einer Liste zugreifen: ", var)
-# Länge einer Liste ermitteln
+# Laenge einer Liste ermitteln
 var = len(a)
-print("Länge einer Liste ermitteln: ", var)
-# Elemente zu einer Liste hinzufügen
+print("Laenge einer Liste ermitteln: ", var)
+# Elemente zu einer Liste hinzufuegen
 a.append("new")
-print("Elemente zu einer Liste hinzufügen: ", a)
+print("Elemente zu einer Liste hinzufuegen: ", a)
 # Elemente aus einer Liste entfernen
 a.pop()
 print("Elemente aus einer Liste entfernen: ", a)
@@ -179,11 +179,11 @@ print("split-Befehl: ", var)
 text = "abc, def, ghi"
 var = text.split(',')
 print("split-Befehl: ", var)
-# Iteration über eine Liste
+# Iteration ueber eine Liste
 a = [34, 'Fred', 12, False, 72.3]
 for x in a:
   print(x)
-# Eine Liste durchzählen
+# Eine Liste durchzaehlen
 for i in range(len(a)):
   print(i, a[i])
 # Eine Liste sortieren
@@ -214,11 +214,11 @@ print("Anfang l[:-2]: ", liste)
 l = ["abc", "def", "ghi", "ijk"]
 print("Liste: ", l)
 liste = [x.upper() for x in l]
-print("Liste groß: ", liste)
+print("Liste gross: ", liste)
 
 ## Dictionary 
 
-# speichert Schlüssel-Wert-Paare ({'key':'value'})
+# speichert Schluessel-Wert-Paare ({'key':'value'})
 phone_numbers = {'Simon':'01234 567899', 'Jane':'01234 666666'}
 print("Dictionary: ", phone_numbers)
 # Auf ein Dictionary zugreifen
@@ -228,7 +228,7 @@ print("Auf ein Dictionary zugreifen: ", var)
 var = phone_numbers.pop('Jane')
 print("Elemente aus einem Dictionary entfernen: ", var)
 print("Dictionary: ", phone_numbers)
-# Iteration über Dictionaries
+# Iteration ueber Dictionaries
 phone_numbers = {'Simon':'01234 567899', 'Jane':'01234 666666'}
 for name in phone_numbers:
   print(name)
@@ -265,7 +265,7 @@ print("Datum & Uhrzeit formatieren: ", out)
 out = "{:%d-%b-%y}".format(d) # 03-Nov-18
 print("Datum & Uhrzeit formatieren: ", out)
 
-## Funktion  - Mehrere Werte zurückliefern
+## Funktion  - Mehrere Werte zurueckliefern
 
 # eine Temperatur in Kelvin sowohl in Fahrenheit 
 # als auch in Celsius umwandeln
@@ -275,14 +275,14 @@ def calculate_temperatures(kelvin):
   return celsius, fahrenheit
 
 c, f = calculate_temperatures(0) # kelvin
-print("Funktion  - Mehrere Werte zurückliefern: ", c, f)
+print("Funktion  - Mehrere Werte zurueckliefern: ", c, f)
 
 ## Eine Klasse definieren
 
 '''
   OOP = Wiederverwendbarkeit, Datenkapselung
-  Klasse = Bauplan für Objekte
-  Person = Bezeichner wird groß geschrieben
+  Klasse = Bauplan fuer Objekte
+  Person = Bezeichner wird gross geschrieben
   Objekte = Eigenschaften, Attribute, Zustand 
             und Methoden, Fuktionen, Verhalten, Operationen
   self = this Objektreferenz, verweist auf das akt. Objekt
@@ -291,15 +291,15 @@ print("Funktion  - Mehrere Werte zurückliefern: ", c, f)
   Konstruktor = Objekt erzeugen
 '''
 
-# Klasse für ein Adressbuch
+# Klasse fuer ein Adressbuch
 class Person:
-  '''Diese Klasse repräsentiert ein Person-Objekt'''
+  '''Diese Klasse repraesentiert ein Person-Objekt'''
   def __init__(self, name, tel):# 
     '''
-      Variable namens name, die für jedes Mitglied (Member) 
-      der Klasse Person zugänglich ist.
+      Variable namens name, die fuer jedes Mitglied (Member) 
+      der Klasse Person zugaenglich ist.
       Diese Variable wird mit dem Wert initialisiert, 
-      der übergeben wird, wenn eine neue Instanz erzeugt wird. 
+      der uebergeben wird, wenn eine neue Instanz erzeugt wird. 
     '''
     # Member-Variablen
     self.name = name 
@@ -322,7 +322,7 @@ print("Zugriff auf Methoden: ", obj2.ausgeben())
 
 
 class Mensch:
-  '''Diese Klasse repräsentiert ein Person-Objekt'''
+  '''Diese Klasse repraesentiert ein Person-Objekt'''
   def __init__(self, first_name, surname, tel):
     self.first_name = first_name
     self.surname = surname
@@ -361,10 +361,10 @@ print("Gehalt gesamt: ", summe)
   Modus Beschreibung
   r Lesen (Read)
   w Schreiben (Write)
-  a Anhängen (Append) – an das Ende einer vorhandenen Datei
-  b Binärmodus
+  a Anhaengen (Append) - an das Ende einer vorhandenen Datei
+  b Binaermodus
   t Textmodus (Standard)
-  + Kürzel für r+w
+  + Kuerzel fuer r+w
 '''
 
 f = open('datei.txt', 'w')

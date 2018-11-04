@@ -7,4 +7,4 @@
 
 hostname -I
 
-sudo ifconfig
+ifconfig
