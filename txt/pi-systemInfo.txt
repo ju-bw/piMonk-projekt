@@ -1,3 +1,7 @@
+# Systeminformationen
+
+% ju -- https://bw1.eu -- 04-Nov-18
+
    Static hostname: raspi
          Icon name: computer
         Machine ID: fb2a24060baf49109292fd77da0826b4

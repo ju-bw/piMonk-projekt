@@ -1,3 +1,7 @@
+# CPU
+
+% ju -- https://bw1.eu -- 04-Nov-18
+
 processor	: 0
 model name	: ARMv7 Processor rev 4 (v7l)
 BogoMIPS	: 76.80

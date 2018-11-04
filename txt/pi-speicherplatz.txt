@@ -1,3 +1,7 @@
+# Speicherplatz sdcard
+
+% ju -- https://bw1.eu -- 04-Nov-18
+
 Dateisystem    Größe Benutzt Verf. Verw% Eingehängt auf
 /dev/root        15G     11G  3,6G   75% /
 devtmpfs        434M       0  434M    0% /dev

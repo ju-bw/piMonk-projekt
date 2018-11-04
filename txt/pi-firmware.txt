@@ -1,3 +1,7 @@
+# Firmware
+
+% ju -- https://bw1.eu -- 04-Nov-18
+
 Oct 23 2018 14:41:50 
 Copyright (c) 2012 Broadcom
 version 724d81b3f87eb71045e938e572eca140fb8828ab (clean) (release)
