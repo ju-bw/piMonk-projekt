@@ -42,7 +42,7 @@ echo "* Scripte *.sh u. *.py ..."
 sudo find . -name "*.sh"  -exec chmod 774 {} +
 sudo find . -name "*.py"  -exec chmod 774 {} +
 
-echo '*******************'
+#echo '*******************'
 #
-ls -lh
+#ls -lh
 echo '*******************'
