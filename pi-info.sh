@@ -172,9 +172,11 @@ mv ./files-alle-scripte.txt ./tmp; sort ./tmp > ./files-alle-scripte.txt; rm ./t
 ./rechte.sh
 
 # mv alle *.txt > txt/
+#sleep: 1 Sekunde warten
+sleep 1
 echo '* mv alle *.txt > txt/'
 if [ ! -d $ordner/ ]; then mkdir -p $ordner/; fi
-mv *.txt $ordner/; 
+mv *.txt $ordner/
 
 echo ''
 
