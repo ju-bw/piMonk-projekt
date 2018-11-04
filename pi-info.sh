@@ -183,6 +183,10 @@ mv *.txt $ordner/
 
 echo ''
 
+git commit -am"pi - txt/"
+git pull
+echo 'git push'
+
 
 
 
