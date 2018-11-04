@@ -44,6 +44,7 @@ echo '' >> pi-gpioNummern.txt
 echo $copyright $timestamp >> pi-gpioNummern.txt
 echo '' >> pi-gpioNummern.txt
 gpio -g readall >> pi-gpioNummern.txt
+echo '****************' >> pi-gpioNummern.txt
 pinout >> pi-gpioNummern.txt
 
 # Systeminformationen
@@ -112,8 +113,8 @@ echo '# Verteilung des Shared-Memory' > pi-shared-memory.txt
 echo '' >> pi-shared-memory.txt
 echo $copyright $timestamp >> pi-shared-memory.txt
 echo '' >> pi-shared-memory.txt
-vcgencmd get_mem arm >> pi-shared-memory.txt
-vcgencmd get_mem gpu >> pi-shared-memory.txt
+echo 'mem_'vcgencmd get_mem arm >> pi-shared-memory.txt
+echo 'mem_'vcgencmd get_mem gpu >> pi-shared-memory.txt
 
 # RAM Speicher
 echo '* RAM Speicher'
@@ -124,17 +125,20 @@ echo '' >> pi-RAM-Speicher.txt
 free -h >> pi-RAM-Speicher.txt
 
 # host - user - ip - speicherbelegung
+#host=$(hostname)
+#user=$(whoami)
+#ip=$(ip addr | awk '/inet.[0-9]/&&!/127.0.0.1/ {print $2}')
+
 echo '* host - user - ip - speicherbelegung'
 echo '# host - user - ip - speicherbelegung' > pi-host-user-ipAdresse.txt
 echo '' >> pi-host-user-ipAdresse.txt
 echo $copyright $timestamp >> pi-host-user-ipAdresse.txt
 echo '' >> pi-host-user-ipAdresse.txt
-host=$(hostname)
 echo 'Host: ' $host >> pi-host-user-ipAdresse.txt
-user=$(whoami)
 echo 'User: ' $user >> pi-host-user-ipAdresse.txt
-ip=$(ip addr | awk '/inet.[0-9]/&&!/127.0.0.1/ {print $2}')
-echo 'IP - LAN (1) und WLAN (2): ' $ip >> pi-host-user-ipAdresse.txt
+echo 'IP - LAN (1) und WLAN (2):' >> pi-host-user-ipAdresse.txt 
+echo $ip >> pi-host-user-ipAdresse.txt
+echo '## Speicherplatz sdcard' >> pi-host-user-ipAdresse.txt 
 df -h >> pi-host-user-ipAdresse.txt 
 
 #suche: files, die sich innerhalb 24 h geaendert haben
@@ -143,30 +147,27 @@ echo '# suche: files, die sich innerhalb 24 h geaendert haben' > ./files-24h-mod
 echo '' >> ./files-24h-modifiziert.txt
 echo $copyright $timestamp >> ./files-24h-modifiziert.txt
 echo '' >> ./files-24h-modifiziert.txt
-find ./ -name '*.py' -type f -mtime -1 >> ./files-24h-modifiziert.txt
-echo '****************' >> ./files-24h-modifiziert.txt 
-find ./ -name '*.sh' -type f -mtime -1 >> ./files-24h-modifiziert.txt
-mv ./files-24h-modifiziert.txt ./tmp; sort ./tmp > ./files-24h-modifiziert.txt; rm ./tmp
+find ./ -name '*.py' -type f -mtime -1 > ./temp.txt
+find ./ -name '*.sh' -type f -mtime -1 >> ./temp.txt
+mv ./temp.txt ./tmp; sort ./tmp >> ./files-24h-modifiziert.txt; rm ./tmp
 
 #suche: files, die sich innerhalb 7 Days geaendert haben
 echo '# suche: files, die sich innerhalb 7 Days geaendert haben' > ./files-7days-modifiziert.txt 
 echo '' >> ./files-7days-modifiziert.txt 
 echo $copyright $timestamp >> ./files-7days-modifiziert.txt 
 echo '' >> ./files-7days-modifiziert.txt 
-find ./ -name '*.py' -type f -mtime -7 >> ./files-7days-modifiziert.txt 
-echo '****************' >> ./files-7days-modifiziert.txt
-find ./ -name '*.sh' -type f -mtime -7 >> ./files-7days-modifiziert.txt 
-mv ./files-7days-modifiziert.txt ./tmp; sort ./tmp > ./files-7days-modifiziert.txt; rm ./tmp
+find ./ -name '*.py' -type f -mtime -7 > ./temp.txt 
+find ./ -name '*.sh' -type f -mtime -7 >> ./temp.txt 
+mv ./temp.txt ./tmp; sort ./tmp >> ./files-7days-modifiziert.txt; rm ./tmp
 
 #suche: *.sh, *.py 
 echo '# suche: *.sh, *.py' > ./files-alle-scripte.txt 
 echo '' >> ./files-alle-scripte.txt 
 echo $copyright $timestamp >> ./files-alle-scripte.txt 
 echo '' >> ./files-alle-scripte.txt 
-find ./ -name '*.py' >> ./files-alle-scripte.txt 
-echo '****************' >> ./files-alle-scripte.txt 
-find ./ -name '*.sh' >> ./files-alle-scripte.txt 
-mv ./files-alle-scripte.txt ./tmp; sort ./tmp > ./files-alle-scripte.txt; rm ./tmp
+find ./ -name '*.py' > ./temp.txt 
+find ./ -name '*.sh' >> ./temp.txt 
+mv ./temp.txt ./tmp; sort ./tmp >> ./files-alle-scripte.txt; rm ./tmp 
 
 # Aufruf ext. Script
 ./rechte.sh
