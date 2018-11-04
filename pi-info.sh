@@ -182,12 +182,14 @@ if [ `ls -a  $ordner/ | wc -l` -gt 2 ]; then rm $ordner/*.txt; fi
 mv *.txt $ordner/
 
 echo ''
-
+echo '********************************'
+echo '* git commit -am"pi - txt/"'
 git commit -am"pi - txt/"
+echo '* git pull'
 git pull
-echo 'git push'
-
-
+echo '+++ Befehl ausführen: "git push"'
+echo '********************************'
+echo ''
 
 
 
