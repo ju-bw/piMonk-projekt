@@ -13,4 +13,5 @@ def index(name='time'):
   return template('<b>Pi date is: {{t}}</b>', t=time)
 
 # ipconfig
-run(host='192.168.178.59', port=80)
+#run(host='192.168.178.59', port=80)
+run() # http://127.0.0.1:8080
