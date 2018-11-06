@@ -10,6 +10,7 @@ import copy
 from datetime import datetime
 import random
 import sys
+import time
 
 
 ## Variablen
@@ -452,14 +453,36 @@ print("Zufallszahl: ", random.randint(1, 6))
   $ sudo apt-get install python-bottle
   $ vi webserver-test.py
 
-  from bottle import route, run, template
+  #  pip3 install bottle
+  from bottle import route, template, run
   from datetime import datetime
+
   @route('/')
   def index(name='time'):
-  dt = datetime.now()
-  time = "{:%Y-%m-%d %H:%M:%S}".format(dt)
-  return template('<b>Pi thinks the date/time is: {{t}}</b>', t=time)
-  run(host='192.168.1.16', port=80)
+    dt = datetime.now()
+    #time = "{:%Y-%m-%d %H:%M:%S}".format(dt) # 2018-11-06 17:33:43
+    #time = "{:%Y-%b-%d}".format(dt) # 2018-Nov-03
+    #time = "{:%d-%m-%Y}".format(dt) # 03-11-2018
+    #time = "{:%H:%M}".format(dt)    # 16:54
+    time = "{:%d-%b-%y}".format(dt) # 03-Nov-18
+    return template('<b>Pi date is: {{t}}</b>', t=time)
+
+  # ipconfig
+  run(host='192.168.178.59', port=80)
 
   $ sudo python3 webserver-test.py
 '''
+
+## Nichts tun mit Python
+
+#import time
+
+x = 0
+while True:
+  print(x)
+  time.sleep(1)# 1s
+  #time.sleep(0.001)# 1ms
+  x += 1
+  if(x > 10):
+    break
+
