@@ -103,7 +103,7 @@ sudo vi /opt/mjpg-streamer/start.sh
 # mjpg-streamer-Server starten
 cd /opt/mjpg-streamer/ 
 sudo modprobe bcm2835-v4l2 #(falls dieses Modul noch nicht geladen ist)
-sudo ./start.sh
+sudo ./start.sh 
 # Streaming aktiv, im Webbrowser Live-Video aufrufen:
 #<IP-Adresse des Roboter-Autos>:8080
 192.168.178.60:8080
