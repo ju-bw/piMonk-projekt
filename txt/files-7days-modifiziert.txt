@@ -1,12 +1,16 @@
 # suche: files, die sich innerhalb 7 Days geaendert haben
 
-% ju -- https://bw1.eu -- 04-Nov-18
+% ju -- https://bw1.eu -- 07-Nov-18
 
+./cmd-line.py
 ./cpu-leistung.py
 ./datei-aus-Internet-herunterladen.sh
+./gui-led-motor-pwm-v02.py
 ./hello.py
 ./ip-adresse-ermitteln.sh
 ./kameramodul.sh
+./live-video-stream.sh
+./os-python.py
 ./pi-info.sh
 ./python-grundlagen.py
 ./reboot.sh
@@ -15,4 +19,7 @@
 ./suchen.sh
 ./svg.py
 ./svg-python-install.sh
+./test.py
 ./usb-geraete-auflisten.sh
+./webserver-test.py
+./webserver-test-win10.py

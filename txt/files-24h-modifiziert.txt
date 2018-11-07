@@ -1,12 +1,6 @@
 # suche: files, die sich innerhalb 24 h geaendert haben
 
-% ju -- https://bw1.eu -- 04-Nov-18
+% ju -- https://bw1.eu -- 07-Nov-18
 
-./datei-aus-Internet-herunterladen.sh
-./ip-adresse-ermitteln.sh
-./kameramodul.sh
-./pi-info.sh
-./python-grundlagen.py
-./rechte.sh
-./screenshot.sh
-./suchen.sh
+./gui-led-motor-pwm-v02.py
+./live-video-stream.sh

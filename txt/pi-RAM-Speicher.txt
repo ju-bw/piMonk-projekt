@@ -1,7 +1,7 @@
 # RAM Speicher
 
-% ju -- https://bw1.eu -- 04-Nov-18
+% ju -- https://bw1.eu -- 07-Nov-18
 
               total        used        free      shared  buff/cache   available
-Mem:           875M        184M        106M         41M        585M        586M
-Swap:           99M        1,5M         98M
+Mem:           875M        190M        147M         16M        537M        610M
+Swap:           99M        5,2M         94M

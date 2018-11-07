@@ -1,6 +1,6 @@
 # Zuordnung zwischen Pin-Nummern und BCM-Nummern
 
-% ju -- https://bw1.eu -- 04-Nov-18
+% ju -- https://bw1.eu -- 07-Nov-18
 
  +-----+-----+---------+------+---+---Pi 3---+---+------+---------+-----+-----+
  | BCM | wPi |   Name  | Mode | V | Physical | V | Mode | Name    | wPi | BCM |

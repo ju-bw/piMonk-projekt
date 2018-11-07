@@ -1,12 +1,12 @@
 # Speicherplatz sdcard
 
-% ju -- https://bw1.eu -- 04-Nov-18
+% ju -- https://bw1.eu -- 07-Nov-18
 
 Dateisystem    Größe Benutzt Verf. Verw% Eingehängt auf
-/dev/root        15G     11G  3,6G   75% /
+/dev/root        15G     11G  3,4G   76% /
 devtmpfs        434M       0  434M    0% /dev
 tmpfs           438M       0  438M    0% /dev/shm
-tmpfs           438M     34M  405M    8% /run
+tmpfs           438M     12M  426M    3% /run
 tmpfs           5,0M    4,0K  5,0M    1% /run/lock
 tmpfs           438M       0  438M    0% /sys/fs/cgroup
 /dev/mmcblk0p1   41M     23M   19M   54% /boot

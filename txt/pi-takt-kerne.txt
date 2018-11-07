@@ -1,16 +1,16 @@
 # Taktfrequenzen der Prozessorkerne
 
-% ju -- https://bw1.eu -- 04-Nov-18
+% ju -- https://bw1.eu -- 07-Nov-18
 
 analysiere CPU 0:
   mögliche Taktfrequenzen: 600 MHz, 1.20 GHz
-  Statistik:600 MHz:98,58%, 1.20 GHz:1,42%  (12599)
+  Statistik:600 MHz:91,27%, 1.20 GHz:8,73%  (1073)
 analysiere CPU 1:
   mögliche Taktfrequenzen: 600 MHz, 1.20 GHz
-  Statistik:600 MHz:98,58%, 1.20 GHz:1,42%  (12599)
+  Statistik:600 MHz:91,27%, 1.20 GHz:8,73%  (1073)
 analysiere CPU 2:
   mögliche Taktfrequenzen: 600 MHz, 1.20 GHz
-  Statistik:600 MHz:98,58%, 1.20 GHz:1,42%  (12599)
+  Statistik:600 MHz:91,27%, 1.20 GHz:8,73%  (1073)
 analysiere CPU 3:
   mögliche Taktfrequenzen: 600 MHz, 1.20 GHz
-  Statistik:600 MHz:98,58%, 1.20 GHz:1,42%  (12599)
+  Statistik:600 MHz:91,27%, 1.20 GHz:8,73%  (1073)

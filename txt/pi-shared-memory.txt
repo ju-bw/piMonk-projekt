@@ -1,6 +1,6 @@
 # Verteilung des Shared-Memory
 
-% ju -- https://bw1.eu -- 04-Nov-18
+% ju -- https://bw1.eu -- 07-Nov-18
 
 * mem_arm=896M
 * mem_gpu=128M

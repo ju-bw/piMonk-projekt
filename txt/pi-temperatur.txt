@@ -1,5 +1,5 @@
 # Temperatur des Prozessors
 
-% ju -- https://bw1.eu -- 04-Nov-18
+% ju -- https://bw1.eu -- 07-Nov-18
 
-temp=46.7'C
+temp=51.5'C
