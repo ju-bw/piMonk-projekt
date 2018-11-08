@@ -1,6 +1,4 @@
-# Robot
-
-Elektrokomponenten
+# Robot - Elektrokomponenten
 
 
 ## Step-down DC-DC Converter Module for Raspberry Pi

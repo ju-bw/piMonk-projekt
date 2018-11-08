@@ -111,8 +111,51 @@ sudo vi /opt/mjpg-streamer/start.sh
 # mjpg-streamer-Server starten
 cd /opt/mjpg-streamer/ 
 sudo modprobe bcm2835-v4l2 #(falls dieses Modul noch nicht geladen ist)
-sudo ./start.sh 
+sudo ./start.sh & # Hindergrund
 # Streaming aktiv, im Webbrowser Live-Video aufrufen:
 #<IP-Adresse des Roboter-Autos>:8080
 192.168.178.60:8080
+
+
+# WebIOPi-Framework installieren
+
+#Download:
+http://webiopi.trouch.com/
+
+# Eintrag Hardware am Ende der Datei
+# SoC-Information und die Speicheradresse
+vi /proc/cpuinfo
+  Hardware  : BCM2835
+  Revision  : a02082
+  Serial    : 000000008fdf721c
+
+# Erste Modifikation für Raspberry Pi 2 oder 3 Modell B
+# aktuell verbaute CPU des Raspberry Pi
+sudo vi /home/pi/WebIOPi-0.7.1/python/native/cpuinfo.c 
+  #BCM2708 => BCM2835 // ersetzen durch aktuelle CPU
+
+  #define BCM2708_PERI_BASE 0x3f000000 =>  // ersetzen durch aktuelle Speicheradresse 
+
+cd /home/pi/WebIOPi-0.7.1/
+sudo ./setup.sh
+
+# kein Live-Video-Stream? Kontrolle
+vi rapicarweb.html
+vi keyweb.html
+  background: url(http://<IP-Adresse Roboter-Auto>:8080/?action=stream) no-repeat;
+
+# HTML-Datei rapicarweb.html für die Steuerung des Roboter-Autos über ein Webinterface
+sudo cp rapicarweb.html /usr/share/webiopi/htdocs/rapicarweb.html
+sudo cp keyweb.html /usr/share/webiopi/htdocs/keyweb.html
+
+# Webinterface starten
+python RobotControlWeb.py
+
+# Roboter-Auto mit einem Touchscreen steuern oder mit der Maus auf die
+# eingeblendeten Pfeiltasten klicken? 
+#http://<IP-Adresse Roboter-Auto>:8000/rapicarweb.html
+#http://<IP-Adresse Roboter-Auto>:8000/keyweb.html
+http://192.168.178.60:8000/rapicarweb.html
+http://192.168.178.60:8000/keyweb.html
+
 
