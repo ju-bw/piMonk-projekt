@@ -5,6 +5,8 @@ sudo apt-get upgrade
 sudo rpi-update
 sudo reboot
 
+vi /proc/cpuinfo
+
 # Texteditor wechseln:
 sudo update-alternatives --config editor
 
@@ -47,6 +49,12 @@ sudo vi /etc/samba/smb.conf
   browsable = yes
 
 sudo /etc/init.d/samba restart
+
+# Samba-Freigabe im Netzwerk 
+# Schreibzugriff auf den Ordner
+sudo chmod a+rwx /home/pi/raspi
+
+\\RASPI\pi\raspi
 
 # Python installieren
 sudo apt-get install python-rpi.gpio
